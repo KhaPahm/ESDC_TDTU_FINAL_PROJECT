@@ -1,0 +1,50 @@
+<form action="/" method="post">
+    <% var t = info.size %>
+
+    <label for="id" class="form-label">ID: </label>
+    <input type="number" class="form-control" id="id" name="id" value=<%= info.id %> def>
+    <br>
+    <label for="name" class="form-label">Tên sản phẩm: </label>
+    <input type="text" class="form-control" id="name" name="name" value="<%= info.name %>"  >
+    <br>
+
+    <label class="form-label" for="price">Giá: &ensp;</label>
+    <div class="input-group mb-3">
+        <input id="price" type="number" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" name="price" value=<%= info.price %>>
+        <span class="input-group-text">VND</span>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="col-lg-4">
+            <label class="form-label" for="sizeS">Số lượng size S: &ensp;</label>
+            <input type="number" class="form-control" id="sizeS" placeholder="0" name="sizeS" value=<%= info.sizeS %>>  
+        </div>
+        <div class="col-lg-4">
+            <label class="form-label" for="sizeM">Số lượng size M: &ensp;</label>
+            <input type="number" class="form-control" id="sizeM" placeholder="0" name="sizeM" value=<%= info.sizeM %>>  
+        </div>
+        <div class="col-lg-4">
+            <label class="form-label" for="sizeL">Số lượng size L: &ensp;</label>
+            <input type="number" class="form-control" id="sizeL" placeholder="0" name="sizeL" value=<%= info.sizeL %>>  
+        </div>
+    </div>
+
+    <br>
+
+    <label for="formFileMultiple" class="form-label">Chọn ảnh:</label>
+    <input class="form-control" type="file" id="formFileMultiple" multiple name="photos" value=<%= info.photos %>>
+    <br>
+
+    
+    
+    <label for="description" class="form-label">Mô tả:</label>
+    <textarea class="form-control" id="description" rows="4" name="description" > <%= info.description %> </textarea>
+    
+    <br>
+    <div class="d-flexd-flex justify-content-end">
+        <button type="submit" class="btn btn-primary">Update</button>
+        <button type="button" class="btn btn-secondary"><a href="/admin" style="text-decoration: none; color: white">Cancel</a></button>
+    </div>
+
+</form>

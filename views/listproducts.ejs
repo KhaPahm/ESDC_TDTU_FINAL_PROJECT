@@ -1,0 +1,49 @@
+<ul class="nav d-flex">
+    <li class="nav-item me-auto p-2">
+        <a class="nav-link active text-danger edit" aria-current="page" href="#">Xóa tất cả</a>
+    </li>
+    <li class="nav-item p-2">
+      <a class="nav-link active edit" aria-current="page" href="/edit">Thêm mới</a>
+    </li>
+    <li class="nav-item dropdown p-2 edit">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Lọc
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+    </li>
+    <form class="d-flex p-2">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </ul>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Tên</th>
+        <th scope="col">Giá</th>
+        <th scope="col">Đã bán</th>
+        <th scope="col">Còn lại</th>
+        <th scope="col">Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+    <% for(var i = 0; i < products.length; i++) { %>
+        <tr>
+            <th scope="row"><%= i+1 %></th>
+            <td><%= products[i].name %></td>
+            <td><%= products[i].price %></td>
+            <td><%= 0 %></td>
+            <td><%= Number(products[i].sizeS) + Number(products[i].sizeM) + Number(products[i].sizeL) %></td>
+            <td> <a href=<%= "/edit/"+i %>><i class="fa-solid fa-pen"></i></a> &ensp; <a><i class="fa-solid fa-trash"></i> </td></a>
+        </tr>
+    <% } %>
+        
+    </tbody>
+  </table>

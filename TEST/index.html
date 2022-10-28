@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:ital,wght@0,400;0,600;0,700;0,805;0,900;1,600;1,700;1,800;1,900&family=Ubuntu&display=swap" rel="stylesheet">
+    
+    <!--fontawesome-->
+    <script src="https://kit.fontawesome.com/b47a1c1ea4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="header">
+        <nav class="navbar">
+            <div class="container-fluid">
+              <img class="navbar-brand img-brand" src="img/logo_brand.png">
+
+              <div class="d-flex" style="text-align: right;">
+                    <div class="profile">
+                        <a href="#" class="name">Admin</a>
+                        <br>
+                        <a href="#" >ad1@admin.com</a>
+                    </div>
+                    <div>
+                        <img src="img/defaut_avatar.jpg" alt="avartar" class="avt">
+                    </div>
+              </div>
+            </div>
+          </nav>
+    </section>
+
+    <section class="content-body">
+        <div class="row">
+            <div class="task col-lg-3">
+                <div class="card" style="width: 100%; margin: 20px">
+                    <div class="card-body">
+                      <h5 class="card-title">Quản lý cửa hàng</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item dropdown-toggle" data-bs-toggle="dropdown">
+                            Quản lí mặt hàng
+                        </li>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Cập nhật</a></li>
+                            <li><a class="dropdown-item" href="#">Doanh thu</a></li>
+                        </ul>
+                        <li class="list-group-item"><a href="#">Đơn hàng chờ xử lý</a></li>
+                        <li class="list-group-item"><a href="#">Đơn hàng đã bán</a></li>
+                        <li class="list-group-item"><a href="#">Quản lí tài khoản</a></li>
+                    </ul>
+                    
+                  </div>
+            </div>
+
+            <div class="col-lg-9">
+                <!-- Manage home page -->
+                <!-- <div class="content-product">
+                    <p><a href="#">Home</a> / <a href="#">Cập nhật sản phẩm</a></p>
+
+                    <h1>Cập nhật sản phẩm</h1>
+
+                    <ul class="nav d-flex">
+                        <li class="nav-item me-auto p-2">
+                            <a class="nav-link active text-danger edit" aria-current="page" href="#">Xóa tất cả</a>
+                        </li>
+                        <li class="nav-item p-2">
+                          <a class="nav-link active edit" aria-current="page" href="#">Thêm mới</a>
+                        </li>
+                        <li class="nav-item dropdown p-2 edit">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Lọc
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <form class="d-flex p-2">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                      </ul>
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Tên</th>
+                            <th scope="col">Giá</th>
+                            <th scope="col">Đã bán</th>
+                            <th scope="col">Còn lại</th>
+                            <th scope="col">Edit</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>Otto</td>
+                            <td> <i class="fa-solid fa-pen"></i> &ensp; <i class="fa-solid fa-trash"></i> </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            <td>Otto</td>
+                            <td> <i class="fa-solid fa-pen"></i> &ensp; <i class="fa-solid fa-trash"></i> </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                            <td>Otto</td>
+                            <td> <i class="fa-solid fa-pen"></i> &ensp; <i class="fa-solid fa-trash"></i> </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div> -->
+                
+                <!-- <div class="content-product">
+                    <form action="">
+                        <label for="name" class="form-label">Tên sản phẩm: </label>
+                        <input type="text" class="form-control" id="name" placeholder="NewShirts...">
+                        <br>
+                        <label class="form-label" for="price">Giá: &ensp;</label>
+                        <div class="input-group mb-3">
+                            <input id="price" type="number" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+                            <span class="input-group-text">VND</span>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <label class="form-label" for="count">Số lượng size S: &ensp;</label>
+                                <input type="number" class="form-control" id="count" placeholder="0">  
+                            </div>
+                            <div class="col-lg-4">
+                                <label class="form-label" for="count">Số lượng size M: &ensp;</label>
+                                <input type="number" class="form-control" id="count" placeholder="0">  
+                            </div>
+                            <div class="col-lg-4">
+                                <label class="form-label" for="count">Số lượng size L: &ensp;</label>
+                                <input type="number" class="form-control" id="count" placeholder="0">  
+                            </div>
+                        </div>
+
+                        <label for="formFileMultiple" class="form-label">Chọn ảnh:</label>
+                        <input class="form-control" type="file" id="formFileMultiple" multiple>
+                        <br>
+                        
+                        <label for="description" class="form-label">Mô tả:</label>
+                        <textarea class="form-control" id="description" rows="4"></textarea>
+                        
+                        <br>
+                        <div class="d-flexd-flex justify-content-end">
+                            <button type="submit" class="btn btn-primary">Update</button>
+                            <button type="button" class="btn btn-secondary">Cancel</button>
+                        </div>
+ 
+                    </form>
+                </div> -->
+
+                <div class="content-product">
+                    <p><a href="#">Home</a> / <a href="#">Cập nhật sản phẩm</a></p>
+
+                    <h1>Đơn hàng đang sử lý</h1>
+                    <br>
+
+                    <h4>Đơn hàng mới</h4>
+                    <hr>
+
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Khách hàng</th>
+                            <th scope="col">SĐT</th>
+                            <th scope="col">Địa chỉ</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Tổng tiền</th>
+                            <th scope="col" style="text-align: center;">Xử lý</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>sdfds</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td style="text-align: center;">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dropdown
+                                  </a>
+                                  <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                  </ul>
+                            </td>
+                            
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td style="text-align: center;"><input type="checkbox"></td>
+                
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td style="text-align: center;"><input type="checkbox"></td>
+                           
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <div class="d-flexd-flex justify-content-end">
+                        <button type="submit" class="btn btn-primary">Update</button>
+                        <button type="button" class="btn btn-secondary">Cancel</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    
+</body>
+<footer class="footer">
+    © Copyright of NewShirts
+</footer>
+
+</html>
