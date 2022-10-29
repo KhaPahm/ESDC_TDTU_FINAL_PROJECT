@@ -1,0 +1,46 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Khách hàng</th>
+        <th scope="col">SĐT</th>
+        <th scope="col">Địa chỉ</th>
+        <th scope="col">Email</th>
+        <th scope="col">Thanh toán</th>
+        <th scope="col">Tổng tiền</th>
+        <th scope="col" style="text-align: center;">Xử lý</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% for(var i = 0; i < orders.length; i++) { %>
+        <tr>
+            <th scope="row"><%= orders.id %></th>
+            <td><% if(orders[i].customer.length > 15) { %>
+                <%= orders[i].customer.substring(0,15) + "..." %>
+                <% } else { %>
+                    <%= orders[i].customer %>
+            <% } %></td>
+            <td><%= orders[i].phone %></td>
+            <td><% if(orders[i].address.length > 15) { %>
+                <%= orders[i].address.substring(0,15) + "..." %>
+                <% } else { %>
+                    <%= orders[i].address %>
+            <% } %></td>
+            <td><% if(orders[i].email.length > 15) { %>
+                <%= orders[i].email.substring(0,15) + "..." %>
+                <% } else { %>
+                    <%= orders[i].email %>
+            <% } %></td>
+            <td><%= orders[i].pay %></td>
+            <td><%= orders[i].total %></td>
+            <td style="text-align: center;">
+            <input type="checkbox">
+            </td>
+        </tbody>
+    <% } %>
+  </table>
+
+  <div class="d-flexd-flex justify-content-end">
+    <button type="submit" class="btn btn-primary">Update</button>
+    <button type="button" class="btn btn-secondary">Cancel</button>
+</div>
